@@ -2,6 +2,9 @@
 
 ## 1. Diferencia entre Git y GitHub
 
+### Planteamiento
+Explica la diferencia entre Git y GitHub.
+
 ### Respuesta
 Git es un sistema de control de versiones distribuido que permite registrar cambios en un proyecto de forma local. GitHub es una plataforma en línea que aloja repositorios Git y facilita la colaboración, revisión y publicación de proyectos.
 
@@ -9,6 +12,9 @@ Git es un sistema de control de versiones distribuido que permite registrar camb
 Git se usa principalmente en la máquina del desarrollador para gestionar versiones del código. GitHub agrega herramientas para compartir ese trabajo con otros, crear Pull Requests, revisar cambios y mantener un historial accesible desde internet.
 
 ## 2. ¿Para qué sirve `.gitignore`?
+
+### Planteamiento
+Explica para qué sirve `.gitignore`.
 
 ### Respuesta
 `.gitignore` sirve para indicar a Git qué archivos o carpetas no deben incluirse en el seguimiento del repositorio.
@@ -18,6 +24,9 @@ Esto permite evitar que archivos temporales, configuraciones locales, dependenci
 
 ## 3. ¿Por qué `.venv` no debe almacenarse normalmente en GitHub?
 
+### Planteamiento
+Explica por qué `.venv` no debe almacenarse normalmente en GitHub.
+
 ### Respuesta
 Porque `.venv` contiene un entorno virtual local con dependencias y configuraciones específicas del equipo o la computadora.
 
@@ -26,6 +35,9 @@ Cada entorno virtual puede variar según la versión de Python, paquetes instala
 
 ## 4. ¿Para qué sirve `requirements.txt`?
 
+### Planteamiento
+Explica para qué sirve `requirements.txt`.
+
 ### Respuesta
 `requirements.txt` sirve para listar las dependencias del proyecto y permitir que otros usuarios o entornos puedan instalarlas con el mismo conjunto de bibliotecas.
 
@@ -33,6 +45,9 @@ Cada entorno virtual puede variar según la versión de Python, paquetes instala
 Cuando alguien desea reproducir el proyecto, puede ejecutar `pip install -r requirements.txt` para instalar exactamente las librerías necesarias. Esto facilita la colaboración y la ejecución del proyecto en otros equipos.
 
 ## 5. Diferencia entre Stage, Commit y Push
+
+### Planteamiento
+Explica la diferencia entre Stage, Commit y Push.
 
 ### Respuesta
 - `Stage` (`git add`): prepara los cambios para el siguiente commit.
@@ -43,6 +58,9 @@ Cuando alguien desea reproducir el proyecto, puede ejecutar `pip install -r requ
 El flujo lógico es: modificar archivos → `git add` → `git commit` → `git push`. Cada paso cumple una función diferente, y la combinación ayuda a mantener un historial ordenado y reproducible.
 
 ## 6. ¿Por qué un repositorio puede tener varios commits antes de realizar un push?
+
+### Planteamiento
+Explica por qué un repositorio puede tener varios commits antes de realizar un push.
 
 ### Respuesta
 Porque un desarrollador puede hacer varios cambios y guardarlos localmente en distintos momentos antes de publicar el trabajo en GitHub.
