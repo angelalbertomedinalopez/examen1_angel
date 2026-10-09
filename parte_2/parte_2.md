@@ -20,7 +20,7 @@ El flujo típico es el siguiente:
 10. Si el repositorio original tiene cambios nuevos, puedes sincronizar tu Fork con `Sync Fork` o `git fetch`/`git pull`.
 
 ### Explicación
-Este flujo permite trabajar sin alterar directamente el proyecto principal. Cada contribución se valida antes de integrarse, lo que reduce riesgos y facilita la colaboración. El `Branch` separa el trabajo de la rama principal y el `Review` permite corregir detalles antes de fusionar.
+Este procedimiento permite colaborar sin modificar directamente el proyecto original. Las ramas ayudan a separar las modificaciones del trabajo principal, mientras que los commits registran los avances. Finalmente, el Pull Request permite evaluar las contribuciones antes de incorporarlas al repositorio original.
 
 ## 2. Fork y Clone
 
@@ -44,12 +44,12 @@ Un `Fork` se hace en GitHub y te da un repositorio independiente asociado a tu c
 Supón que realizaste Fork, Clone, Branch, Modificar, Commit y Push. Responde: ¿los cambios ya forman parte del repositorio original? ¿Qué debe ocurrir para incorporarlos?
 
 ### Respuesta
-No, los cambios no forman parte del repositorio original solo por haber hecho `Push` a tu Fork. La rama con los cambios debe ser enviada mediante un Pull Request.
+No, los cambios todavía no están incorporados al repositorio original. Es necesario enviar un Pull Request y esperar a que los cambios sean aceptados e integrados.
 
 Para incorporarlos, el propietario del repositorio original debe revisar el Pull Request y luego aceptar el `Merge`.
 
 ### Explicación
-Un `Push` a tu Fork publica los cambios en tu copia personal del proyecto, pero no los integra en el proyecto original. El Pull Request es la vía formal para proponer la incorporación de esos cambios al repositorio principal.
+El `Push` publica tus commits en tu propio Fork, no en el repositorio del otro desarrollador. El Pull Request propone esos cambios al repositorio original y el `Merge` los incorpora si el propietario los aprueba.
 
 ## 4. Request Changes
 
@@ -57,12 +57,10 @@ Un `Push` a tu Fork publica los cambios en tu copia personal del proyecto, pero 
 El propietario revisa tu Pull Request y selecciona Request Changes. Explica qué debes hacer, si necesitas crear otro Pull Request y qué ocurre cuando realizas nuevamente push.
 
 ### Respuesta
-Cuando se usan `Request Changes`, significa que el propietario quiere que ajustes o corrijas algo antes de aceptar la propuesta. Debes hacer los cambios necesarios en tu rama, revisarlos y volver a enviar la versión actualizada.
-
-No necesitas crear otro Pull Request si la solicitud sigue siendo la misma rama y el PR sigue abierto. Cuando haces `git push` nuevamente, el Pull Request se actualiza automáticamente con los nuevos cambios.
+Debo atender las observaciones del propietario, corregir los archivos y subir las modificaciones a la misma rama. No es necesario abrir otro Pull Request.
 
 ### Explicación
-Un PR está vinculado a una rama concreta. Si esa rama cambia, GitHub refleja la nueva versión dentro del mismo PR. Esto permite hacer revisiones iterativas y corregir errores sin abrir un nuevo flujo de colaboración completo.
+Cuando el propietario selecciona Request Changes, significa que necesita que realice ajustes antes de aceptar la propuesta. Después de corregir los archivos, debo crear otro commit y ejecutar git push. Como los cambios se envían a la misma rama vinculada al Pull Request, este se actualiza automáticamente y puede revisarse de nuevo.
 
 ## 5. Merge y repositorio local
 
@@ -75,7 +73,7 @@ Esto ocurre porque el `Merge` se hizo en GitHub, no en la máquina local del pro
 Para actualizarlo, se debe hacer `git pull` o `git fetch` seguido de `git merge` (o simplemente `git pull` si el repositorio está configurado correctamente).
 
 ### Explicación
-GitHub y la copia local son repositorios separados. Una vez que el remoto acepta cambios, el desarrollador debe sincronizar su copia local para incorporar esos commits.
+El Merge modifica el repositorio remoto, pero no actualiza automáticamente los archivos que están guardados en la computadora del propietario. Por eso, debe descargar las actualizaciones del remoto mediante git pull, estando en la rama correspondiente, para incorporar esos cambios a su copia local.
 
 ## 6. Sync Fork
 
@@ -91,4 +89,4 @@ La diferencia con `git pull` es que:
 - `Sync Fork` es una acción de GitHub para actualizar una bifurcación con los cambios del proyecto original.
 
 ### Explicación
-`git pull` sirve para traer cambios desde un remoto ya configurado a tu copia local. `Sync Fork` es útil cuando trabajas con un Fork y quieres mantenerlo al día respecto al repositorio base, sin tocar el proyecto principal.
+`Sync Fork` actualiza tu copia del repositorio en GitHub con los cambios del repositorio original. `git pull`, en cambio, descarga e integra en tu copia local los cambios del remoto configurado. Si ya sincronizaste el Fork, puedes después usar `git pull` para actualizar también tu repositorio local.
