@@ -20,3 +20,7 @@ Tu Nombre completo
 ## Estado del proyecto
 
 Proyecto en etapa inicial.
+
+## Estado del proyecto
+
+Proyecto en etapa inicial.
