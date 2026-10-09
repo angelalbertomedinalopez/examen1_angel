@@ -73,7 +73,3 @@ La operación adecuada es `git pull`.
 
 ### Explicación
 `git pull` trae los cambios del repositorio remoto al repositorio local y los integra con la rama actual. Se usa cuando el equipo ya publicó cambios en GitHub y tú quieres mantener tu copia local sincronizada.
-
-## 5. Conclusión
-
-Git funciona como un sistema de control de versiones que guarda historial y permite seguimiento de los cambios. Las instrucciones básicas permiten revisar, preparar, confirmar y publicar el trabajo de manera ordenada y segura.
