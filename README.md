@@ -21,6 +21,6 @@ Tu Nombre completo
 
 Proyecto en etapa inicial.
 
-## Estado del proyecto
+## Control de versiones
 
-Proyecto en etapa inicial.
+El proyecto utiliza Git para control de versiones y GitHub como repositorio remoto.
